@@ -1,0 +1,99 @@
+﻿<Window x:Class="Sulmar.WPFMVVM.Advanced.WPFClient.Views.TemplatePartsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sulmar.WPFMVVM.Advanced.WPFClient.Views"
+        mc:Ignorable="d"
+        Title="TemplatePartsView" Height="450" Width="800">
+
+    <Window.Resources>
+        <BitmapImage x:Key="MyImageSource" UriSource="../Assets/Search.png" />
+
+        <ControlTemplate x:Key="MyTextBoxTemplate" TargetType="TextBoxBase">
+            <Grid>
+                <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Background="{TemplateBinding Background}"
+                                    SnapsToDevicePixels="True">
+                    <ScrollViewer x:Name="PART_ContentHost" 
+                                              Focusable="False"
+                                              HorizontalScrollBarVisibility="Hidden"
+                                              VerticalScrollBarVisibility="Hidden"
+                                              />
+
+                </Border>
+
+                <TextBlock Text="{TemplateBinding Tag}"
+                                       IsHitTestVisible="False"
+                                       Foreground="Gray"
+                                       Padding="{TemplateBinding Padding}"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                      >
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, RelativeSource={RelativeSource TemplatedParent}}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+
+                </TextBlock>
+
+
+            </Grid>
+
+        </ControlTemplate>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Template" Value="{StaticResource MyTextBoxTemplate}" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <StackPanel>
+            <TextBox Margin="10">
+                <TextBox.Template>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border>
+                            <DockPanel>
+                                <Image Source="{StaticResource MyImageSource}" 
+                                       Width="25"
+                                       DockPanel.Dock="Right" />
+                                <ScrollViewer />
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+
+            <TextBox Margin="10">
+                <TextBox.Template>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border>
+                            <DockPanel>
+                                <Image Source="{StaticResource MyImageSource}"   
+                                       Width="25"
+                                       DockPanel.Dock="Right" />
+                                <ScrollViewer Name="PART_ContentHost" />
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+
+            <TextBox Tag="First name" />
+            <TextBox Tag="Last name" />
+
+        </StackPanel>
+        
+        
+        
+    </Grid>
+</Window>

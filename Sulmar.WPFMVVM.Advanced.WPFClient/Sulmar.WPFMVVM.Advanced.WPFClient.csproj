@@ -54,7 +54,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AttachedProperties\Ex.cs" />
+    <Compile Include="AttachedProperties\TextBoxEx.cs" />
     <Compile Include="MarkupExtensions\SplitBinding.cs" />
+    <Compile Include="MarkupExtensions\EnumDropdown.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="ViewModels\MarkupExtensionsViewModel.cs" />
+    <Compile Include="Views\AttachedPropertiesView.xaml.cs">
+      <DependentUpon>AttachedPropertiesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MarkupExtensionsView.xaml.cs">
       <DependentUpon>MarkupExtensionsView.xaml</DependentUpon>
     </Compile>
@@ -62,7 +70,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Views\TemplatePartsView.xaml.cs">
+      <DependentUpon>TemplatePartsView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\AttachedPropertiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MarkupExtensionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TemplatePartsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -93,6 +112,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

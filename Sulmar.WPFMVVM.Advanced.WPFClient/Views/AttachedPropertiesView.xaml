@@ -1,0 +1,17 @@
+﻿<Window x:Class="Sulmar.WPFMVVM.Advanced.WPFClient.Views.AttachedPropertiesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sulmar.WPFMVVM.Advanced.WPFClient.Views"
+        xmlns:ap="clr-namespace:Sulmar.WPFMVVM.Advanced.WPFClient.AttachedProperties"
+        mc:Ignorable="d"
+        Title="AttachedPropertiesView" Height="450" Width="800">
+    <Grid>
+
+        <!--<ap:TextBoxEx Text="Hello World" SecurityId="abc" />-->
+
+        <TextBox Text="Hello World" ap:Ex.SecurityId="abc" />
+
+    </Grid>
+</Window>

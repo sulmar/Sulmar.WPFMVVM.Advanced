@@ -5,14 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sulmar.WPFMVVM.Advanced.WPFClient.Views"
         xmlns:me="clr-namespace:Sulmar.WPFMVVM.Advanced.WPFClient.MarkupExtensions"
+        xmlns:m="clr-namespace:Sulmar.WPFMVVM.Advanced.WPFClient.Models"
+        xmlns:vm="clr-namespace:Sulmar.WPFMVVM.Advanced.WPFClient.ViewModels"
         mc:Ignorable="d"
         Title="MarkupExtensionsView" Height="450" Width="800">
+
+    <Window.DataContext>
+        <vm:MarkupExtensionsViewModel />
+        
+    </Window.DataContext>
     <Grid>
         <StackPanel>
             <Label Content="{me:CurrentDirectory}" />
 
 
             <ListView ItemsSource="{me:SplitBinding Source=raz;dwa;trzy;cztery,Separator=;}" />
+
+
+            <ComboBox ItemsSource="{me:EnumDropdown m:Status}" 
+                      SelectedItem="{Binding SelectedStatus}"
+                      />
+
+            
         </StackPanel>
         
     </Grid>
