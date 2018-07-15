@@ -44,6 +44,8 @@ namespace Sulmar.WPFMVVM.Advanced.WPFClient.ViewModels
             LoadCommand = new RelayCommand(p => Load());
             SendCommand = new RelayCommand(p => Send(), p => CanSend);
 
+            Load();
+
 
         }
 
@@ -51,7 +53,7 @@ namespace Sulmar.WPFMVVM.Advanced.WPFClient.ViewModels
         {
             // Items = Enumerable.Range(1, 10000).Select(x => $"Item {x}");
 
-            Customers = Enumerable.Range(1, 10000).Select(id => new Customer(id, $"Customer {id}")).ToList();
+            Customers = Enumerable.Range(1, 10).Select(id => new Customer(id, $"Customer {id}")).ToList();
 
         }
 

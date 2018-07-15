@@ -68,6 +68,7 @@
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Converters\BaseValueConverter.cs" />
     <Compile Include="Converters\StatusConverter.cs" />
+    <Compile Include="CustomPanels\RadialPanel.cs" />
     <Compile Include="MarkupExtensions\SplitBinding.cs" />
     <Compile Include="MarkupExtensions\EnumDropdown.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -91,6 +92,9 @@
     </Compile>
     <Compile Include="Views\ConvertersView.xaml.cs">
       <DependentUpon>ConvertersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomPanelsView.xaml.cs">
+      <DependentUpon>CustomPanelsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MarkupExtensionsView.xaml.cs">
       <DependentUpon>MarkupExtensionsView.xaml</DependentUpon>
@@ -130,6 +134,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConvertersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CustomPanelsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
