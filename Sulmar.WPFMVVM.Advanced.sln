@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.WPFMVVM.Advanced.WPFClient", "Sulmar.WPFMVVM.Advanced.WPFClient\Sulmar.WPFMVVM.Advanced.WPFClient.csproj", "{EBF7AC2F-B590-41D1-8423-CD19B53CC9F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBF7AC2F-B590-41D1-8423-CD19B53CC9F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF7AC2F-B590-41D1-8423-CD19B53CC9F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF7AC2F-B590-41D1-8423-CD19B53CC9F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF7AC2F-B590-41D1-8423-CD19B53CC9F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {720635F5-9687-46E8-9527-936A0984CD9E}
+	EndGlobalSection
+EndGlobal
