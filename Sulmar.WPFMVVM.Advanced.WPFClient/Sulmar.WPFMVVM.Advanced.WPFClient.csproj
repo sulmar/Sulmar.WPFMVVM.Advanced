@@ -56,12 +56,17 @@
     </ApplicationDefinition>
     <Compile Include="AttachedProperties\Ex.cs" />
     <Compile Include="AttachedProperties\TextBoxEx.cs" />
+    <Compile Include="Converters\BaseValueConverter.cs" />
+    <Compile Include="Converters\StatusConverter.cs" />
     <Compile Include="MarkupExtensions\SplitBinding.cs" />
     <Compile Include="MarkupExtensions\EnumDropdown.cs" />
     <Compile Include="Models\Status.cs" />
     <Compile Include="ViewModels\MarkupExtensionsViewModel.cs" />
     <Compile Include="Views\AttachedPropertiesView.xaml.cs">
       <DependentUpon>AttachedPropertiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConvertersView.xaml.cs">
+      <DependentUpon>ConvertersView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MarkupExtensionsView.xaml.cs">
       <DependentUpon>MarkupExtensionsView.xaml</DependentUpon>
@@ -74,6 +79,10 @@
       <DependentUpon>TemplatePartsView.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\AttachedPropertiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConvertersView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
