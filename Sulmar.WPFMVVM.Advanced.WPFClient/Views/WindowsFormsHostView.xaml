@@ -1,0 +1,21 @@
+﻿<Window x:Class="Sulmar.WPFMVVM.Advanced.WPFClient.Views.WindowsFormsHostView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ctr="clr-namespace:Sulmar.WPFMVVM.Advanced.WinFormsClient.Controls;assembly=Sulmar.WPFMVVM.Advanced.WinFormsClient"
+        xmlns:local="clr-namespace:Sulmar.WPFMVVM.Advanced.WPFClient.Views"
+        mc:Ignorable="d"
+        Title="WindowsFormsHostView" Height="450" Width="800">
+    <Grid>
+
+        <!-- Add reference WindowsFormsIntegration.dll -->
+
+        <WindowsFormsHost   DockPanel.Dock="Top"
+                 Height="300">
+            <ctr:MyControl />
+        </WindowsFormsHost>
+           
+
+    </Grid>
+</Window>

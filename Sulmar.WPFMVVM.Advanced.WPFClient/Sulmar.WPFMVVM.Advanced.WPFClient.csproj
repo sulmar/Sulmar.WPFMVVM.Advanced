@@ -56,6 +56,7 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -68,6 +69,7 @@
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Converters\BaseValueConverter.cs" />
     <Compile Include="Converters\StatusConverter.cs" />
+    <Compile Include="CustomPanels\MySimplePanel.cs" />
     <Compile Include="CustomPanels\RadialPanel.cs" />
     <Compile Include="MarkupExtensions\SplitBinding.cs" />
     <Compile Include="MarkupExtensions\EnumDropdown.cs" />
@@ -111,6 +113,9 @@
     </Compile>
     <Compile Include="Views\VisualDrawingsView.xaml.cs">
       <DependentUpon>VisualDrawingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WindowsFormsHostView.xaml.cs">
+      <DependentUpon>WindowsFormsHostView.xaml</DependentUpon>
     </Compile>
     <Compile Include="VisualDrawings\MyVisualHost.cs" />
     <Page Include="UserControls\MyUserControl.xaml">
@@ -157,6 +162,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\WindowsFormsHostView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MarkupExtensions\CurrentDirectory.cs" />
@@ -190,6 +199,12 @@
     <Content Include="Assets\Search.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sulmar.WPFMVVM.Advanced.WinFormsClient\Sulmar.WPFMVVM.Advanced.WinFormsClient.csproj">
+      <Project>{5c5c2088-58d0-45e5-95b6-28fceb2e39a7}</Project>
+      <Name>Sulmar.WPFMVVM.Advanced.WinFormsClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
