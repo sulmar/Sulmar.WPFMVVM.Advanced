@@ -105,6 +105,10 @@
     <Compile Include="Views\VirtualizingView.xaml.cs">
       <DependentUpon>VirtualizingView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\VisualDrawingsView.xaml.cs">
+      <DependentUpon>VisualDrawingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisualDrawings\MyVisualHost.cs" />
     <Page Include="UserControls\MyUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -138,6 +142,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\VirtualizingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\VisualDrawingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
