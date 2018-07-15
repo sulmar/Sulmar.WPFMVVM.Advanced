@@ -44,11 +44,22 @@
 
             <CheckBox Content="IsVirtualizing" x:Name="IsVirtualizing" />
 
-            <ListBox Height="300" 
+            <ListBox Height="200" 
                      VirtualizingStackPanel.IsVirtualizing="{Binding ElementName=IsVirtualizing, Path=IsChecked}"
                      VirtualizingStackPanel.VirtualizationMode="Recycling"
-                     ItemsSource="{Binding Items}"
+                     ItemsSource="{Binding Customers}"
+                     DisplayMemberPath="Name"
                      />
+
+
+            <DataGrid  Height="200" 
+                       ItemsSource="{Binding Customers}"
+                        AutoGenerateColumns="True"
+                        EnableRowVirtualization="{Binding ElementName=IsVirtualizing, Path=IsChecked}"
+                        EnableColumnVirtualization="{Binding ElementName=IsVirtualizing, Path=IsChecked}"
+                       VirtualizingPanel.IsVirtualizingWhenGrouping="True">
+                
+            </DataGrid>
            
         </StackPanel>
     </Grid>

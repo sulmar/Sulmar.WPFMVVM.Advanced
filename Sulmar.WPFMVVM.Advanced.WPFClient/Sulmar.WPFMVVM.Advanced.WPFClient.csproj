@@ -70,6 +70,7 @@
     <Compile Include="Converters\StatusConverter.cs" />
     <Compile Include="MarkupExtensions\SplitBinding.cs" />
     <Compile Include="MarkupExtensions\EnumDropdown.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Status.cs" />
     <Compile Include="UserControls\MyUserControl.xaml.cs">
       <DependentUpon>MyUserControl.xaml</DependentUpon>

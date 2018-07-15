@@ -12,6 +12,7 @@ namespace Sulmar.WPFMVVM.Advanced.WPFClient.ViewModels
     public class MarkupExtensionsViewModel : BaseViewModel
     {
         private IEnumerable<string> _items;
+        private IList<Customer> _customers;
 
         public Status SelectedStatus { get; set; } = Status.Completed;
 
@@ -27,6 +28,17 @@ namespace Sulmar.WPFMVVM.Advanced.WPFClient.ViewModels
             }
         }
 
+
+        public IList<Customer> Customers
+        {
+            get => _customers; set
+            {
+                _customers = value;
+
+                OnPropertyChanged();
+            }
+        }
+
         public MarkupExtensionsViewModel()
         {
             LoadCommand = new RelayCommand(p => Load());
@@ -37,7 +49,10 @@ namespace Sulmar.WPFMVVM.Advanced.WPFClient.ViewModels
 
         private void Load()
         {
-            Items = Enumerable.Range(1, 10000).Select(x => $"Item {x}");
+            // Items = Enumerable.Range(1, 10000).Select(x => $"Item {x}");
+
+            Customers = Enumerable.Range(1, 10000).Select(id => new Customer(id, $"Customer {id}")).ToList();
+
         }
 
         private void Send()
