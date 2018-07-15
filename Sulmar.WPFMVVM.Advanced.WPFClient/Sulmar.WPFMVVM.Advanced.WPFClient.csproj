@@ -39,6 +39,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -69,6 +71,10 @@
     <Compile Include="MarkupExtensions\SplitBinding.cs" />
     <Compile Include="MarkupExtensions\EnumDropdown.cs" />
     <Compile Include="Models\Status.cs" />
+    <Compile Include="UserControls\MyUserControl.xaml.cs">
+      <DependentUpon>MyUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MarkupExtensionsViewModel.cs" />
     <Compile Include="Views\AnimationsView.xaml.cs">
       <DependentUpon>AnimationsView.xaml</DependentUpon>
@@ -95,6 +101,13 @@
     <Compile Include="Views\TemplatePartsView.xaml.cs">
       <DependentUpon>TemplatePartsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\VirtualizingView.xaml.cs">
+      <DependentUpon>VirtualizingView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UserControls\MyUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AnimationsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +133,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\TemplatePartsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\VirtualizingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
