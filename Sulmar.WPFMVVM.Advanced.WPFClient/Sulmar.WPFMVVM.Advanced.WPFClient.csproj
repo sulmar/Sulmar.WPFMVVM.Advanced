@@ -69,6 +69,7 @@
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Converters\BaseValueConverter.cs" />
     <Compile Include="Converters\StatusConverter.cs" />
+    <Compile Include="CustomControls\MyCustomControl.cs" />
     <Compile Include="CustomPanels\MySimplePanel.cs" />
     <Compile Include="CustomPanels\RadialPanel.cs" />
     <Compile Include="MarkupExtensions\SplitBinding.cs" />
@@ -95,6 +96,9 @@
     <Compile Include="Views\ConvertersView.xaml.cs">
       <DependentUpon>ConvertersView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CustomControlsView.xaml.cs">
+      <DependentUpon>CustomControlsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CustomPanelsView.xaml.cs">
       <DependentUpon>CustomPanelsView.xaml</DependentUpon>
     </Compile>
@@ -118,6 +122,10 @@
       <DependentUpon>WindowsFormsHostView.xaml</DependentUpon>
     </Compile>
     <Compile Include="VisualDrawings\MyVisualHost.cs" />
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControls\MyUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +147,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConvertersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CustomControlsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
