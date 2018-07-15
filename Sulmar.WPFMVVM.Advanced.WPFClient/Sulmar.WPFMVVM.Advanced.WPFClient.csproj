@@ -34,8 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,14 +62,25 @@
     </ApplicationDefinition>
     <Compile Include="AttachedProperties\Ex.cs" />
     <Compile Include="AttachedProperties\TextBoxEx.cs" />
+    <Compile Include="Behaviors\ButtonBehavior.cs" />
+    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Converters\BaseValueConverter.cs" />
     <Compile Include="Converters\StatusConverter.cs" />
     <Compile Include="MarkupExtensions\SplitBinding.cs" />
     <Compile Include="MarkupExtensions\EnumDropdown.cs" />
     <Compile Include="Models\Status.cs" />
     <Compile Include="ViewModels\MarkupExtensionsViewModel.cs" />
+    <Compile Include="Views\AnimationsView.xaml.cs">
+      <DependentUpon>AnimationsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AttachedPropertiesView.xaml.cs">
       <DependentUpon>AttachedPropertiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BehaviorsView.xaml.cs">
+      <DependentUpon>BehaviorsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CommandsView.xaml.cs">
+      <DependentUpon>CommandsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ConvertersView.xaml.cs">
       <DependentUpon>ConvertersView.xaml</DependentUpon>
@@ -78,7 +95,19 @@
     <Compile Include="Views\TemplatePartsView.xaml.cs">
       <DependentUpon>TemplatePartsView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\AnimationsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AttachedPropertiesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BehaviorsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CommandsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,6 +143,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
