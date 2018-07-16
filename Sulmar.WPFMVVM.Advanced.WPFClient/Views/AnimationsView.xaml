@@ -50,10 +50,10 @@
 
                 <EventTrigger RoutedEvent="MouseEnter">
                     <BeginStoryboard>
-                        <Storyboard>
+                        <Storyboard Timeline.DesiredFrameRate="30">
 
 
-                            <DoubleAnimation Storyboard.TargetProperty="Width" To="150" Duration="0:0:1"  />
+                            <DoubleAnimation Storyboard.TargetProperty="Width" To="150" Duration="0:0:1"  Timeline.DesiredFrameRate="20" />
                             <DoubleAnimation Storyboard.TargetProperty="Height" To="150" Duration="0:0:1"  />
 
                             <ColorAnimation Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" From="White" To="Red"

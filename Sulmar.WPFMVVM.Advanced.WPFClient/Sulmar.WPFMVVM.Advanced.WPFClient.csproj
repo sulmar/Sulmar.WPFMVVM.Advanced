@@ -103,6 +103,9 @@
     <Compile Include="Views\CustomPanelsView.xaml.cs">
       <DependentUpon>CustomPanelsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\FreezeView.xaml.cs">
+      <DependentUpon>FreezeView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MarkupExtensionsView.xaml.cs">
       <DependentUpon>MarkupExtensionsView.xaml</DependentUpon>
     </Compile>
@@ -156,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CustomPanelsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FreezeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
