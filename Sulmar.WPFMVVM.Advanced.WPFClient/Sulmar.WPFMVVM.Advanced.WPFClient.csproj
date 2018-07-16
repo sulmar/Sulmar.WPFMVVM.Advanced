@@ -103,6 +103,9 @@
     <Compile Include="Views\CustomPanelsView.xaml.cs">
       <DependentUpon>CustomPanelsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DefferedView.xaml.cs">
+      <DependentUpon>DefferedView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\FreezeView.xaml.cs">
       <DependentUpon>FreezeView.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,9 @@
     </Compile>
     <Compile Include="Views\TemplatePartsView.xaml.cs">
       <DependentUpon>TemplatePartsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransformsView.xaml.cs">
+      <DependentUpon>TransformsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VirtualizingView.xaml.cs">
       <DependentUpon>VirtualizingView.xaml</DependentUpon>
@@ -168,6 +174,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\DefferedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\FreezeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -185,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\TemplatePartsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TransformsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
