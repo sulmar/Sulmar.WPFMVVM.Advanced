@@ -69,6 +69,7 @@
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Converters\BaseValueConverter.cs" />
     <Compile Include="Converters\StatusConverter.cs" />
+    <Compile Include="CustomControls\MyControl.cs" />
     <Compile Include="CustomControls\MyCustomControl.cs" />
     <Compile Include="CustomPanels\MySimplePanel.cs" />
     <Compile Include="CustomPanels\RadialPanel.cs" />
