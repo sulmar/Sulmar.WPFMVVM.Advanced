@@ -109,6 +109,9 @@
     <Compile Include="Views\ImagesView.xaml.cs">
       <DependentUpon>ImagesView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ListBoxHorizontal.xaml.cs">
+      <DependentUpon>ListBoxHorizontal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MarkupExtensionsView.xaml.cs">
       <DependentUpon>MarkupExtensionsView.xaml</DependentUpon>
     </Compile>
@@ -170,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ImagesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListBoxHorizontal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

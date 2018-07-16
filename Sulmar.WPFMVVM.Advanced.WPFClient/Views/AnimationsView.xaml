@@ -20,6 +20,25 @@
             </Grid>
         </ControlTemplate>
 
+
+         <Storyboard x:Key="Bigger">
+            <DoubleAnimation Storyboard.TargetProperty="Width" To="200" Duration="0:0:1"  />
+         </Storyboard>
+
+        <Storyboard x:Key="flipForward" >
+            <DoubleAnimation By="180" 
+                         FillBehavior="HoldEnd"
+                         Duration="0:0:0.5"
+                         Storyboard.TargetProperty="(StackPanel.Orientation)" />
+        </Storyboard>
+
+        <Storyboard x:Key="flipBackward" >
+            <DoubleAnimation By="-180"
+                         FillBehavior="HoldEnd"
+                         Duration="0:0:0.5"
+                         Storyboard.TargetProperty="(StackPanel.Orientation)" />
+        </Storyboard>
+
         <Style TargetType="Button">
             <Setter Property="Width" Value="100" />
             <Setter Property="Height" Value="100" />
@@ -68,12 +87,71 @@
     
     <Grid>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel>
+        
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 
-            <Button Content="1" />
-            <Button Content="2" />
-            <Button Content="3" />
+                <Button Content="1" />
+                <Button Content="2" />
+                <Button Content="3" />
+
+          
+            </StackPanel>
+
+            <Grid>
+
+                <StackPanel>
+                    <StackPanel Width="300" Height="50" Background="Green">
+                        <TextBlock HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Text="Hello" />
+
+                        <StackPanel.Style>
+                            <Style TargetType="StackPanel">
+                                <Style.Triggers>
+                                    <EventTrigger RoutedEvent="MouseEnter">
+                                        <BeginStoryboard>
+                                            <StaticResource ResourceKey="flipForward" />
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                    
+
+                                    <!--<DataTrigger Binding="{Binding ElementName=button1, Path=IsChecked}">
+                                        <DataTrigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <StaticResource ResourceKey="flipForward" />
+                                            </BeginStoryboard>
+                                        </DataTrigger.EnterActions>
+
+                                        <DataTrigger.ExitActions>
+                                            <BeginStoryboard>
+                                                <StaticResource ResourceKey="flipBackward" />
+                                            </BeginStoryboard>
+                                        </DataTrigger.ExitActions>
+
+                                    </DataTrigger>-->
+                                </Style.Triggers>
+                            </Style>
+                        </StackPanel.Style>
+                    </StackPanel>
+
+                    <ToggleButton x:Name="button1" Margin="10"  Width="100" Height="20" Content="Click me!">
+                        <ToggleButton.Style>
+                            <Style TargetType="ToggleButton">
+                                <Style.Triggers>
+                                    <EventTrigger RoutedEvent="MouseEnter">
+                                        <BeginStoryboard>
+                                            <StaticResource ResourceKey="Bigger" />
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ToggleButton.Style>
+                    </ToggleButton>
+                </StackPanel>
+
+            </Grid>
         </StackPanel>
-
+        
     </Grid>
 </Window>
