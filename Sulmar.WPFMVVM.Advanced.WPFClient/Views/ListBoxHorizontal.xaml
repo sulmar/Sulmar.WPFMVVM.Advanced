@@ -10,7 +10,7 @@
         <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel IsItemsHost="True" />
+                    <VirtualizingStackPanel IsItemsHost="True" Orientation="Horizontal"/>
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
             <ListBoxItem>listbox item 1</ListBoxItem>
